@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Admin\AdminOperations.cs" />
+    <Compile Include="Models\Admin\HocalarOperations.cs" />
+    <Compile Include="Models\Admin\OgrenciOperations.cs" />
     <Compile Include="Models\Admin\UniverstyOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
