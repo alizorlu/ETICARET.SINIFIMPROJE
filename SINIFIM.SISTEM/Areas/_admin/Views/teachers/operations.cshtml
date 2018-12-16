@@ -1,8 +1,49 @@
 ﻿
 @{
-    ViewBag.Title = "operations";
+    ViewBag.Title = "Öğretim Görevlileri Listesi";
     Layout = "~/Views/Sinifim_General_Layout.cshtml";
 }
 
-<h2>operations</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h4>Öğretim Elemanlar</h4>
+                    <a href="/_admin/teachers/add" class="btn btn-primary btn-sm">Yeni Öğretim Görevlisi Ekle</a>
+                </div>
+                <div class="box-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Adı</th>
+                                <th>
+                                    Üniversite
+                                </th>
+                                <th>Email</th>
+                                <th>Sınıf.Sa</th>
+                                <th>#İŞLEMLER#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Songül Karakuş</td>
+                                <td>Fırat Üniversitesi</td>
+                                <td>sgkara@sg.com</td>
+                                <td>2 sınıf</td>
+                                <td>
+                                    <button class="btn btn-success btn-sm">Şifre.S</button>
+                                    <button class="btn btn-danger btn-sm">Sil</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-footer">
+                    <small>Toplam 1 adet öğretim görevlisi vardır</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 

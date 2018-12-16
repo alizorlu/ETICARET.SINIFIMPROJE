@@ -6873,6 +6873,7 @@
     <Content Include="Areas\_admin\Views\university\add.cshtml" />
     <Content Include="Areas\_admin\Views\teachers\operations.cshtml" />
     <Content Include="Areas\_admin\Views\teachers\add.cshtml" />
+    <Content Include="Areas\_admin\Views\teachers\passreset.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Sinifim_General_Layout.cshtml" />
     <Content Include="Views\test\Index.cshtml" />
