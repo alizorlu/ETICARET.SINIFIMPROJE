@@ -19,6 +19,11 @@ namespace SINIFIM.SISTEM.Areas._admin.Controllers
             //Burada hoca ekleme sayfası açılacak
             return View();
         }
+        public ActionResult passreset()
+        {
+            return View();
+        }
+      
         
         
     }
