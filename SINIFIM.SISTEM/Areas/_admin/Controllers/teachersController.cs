@@ -25,8 +25,11 @@ namespace SINIFIM.SISTEM.Areas._admin.Controllers
             //Burada hoca ekleme sayfası açılacak
             return View();
         }
-        public ActionResult delete()
+        public async Task<ActionResult> delete(int id)
         {
+            bool result = await hocaOps.DeleteArGorAsync(id);
+
+
             return View();
         }
         public async Task<ActionResult> passreset(int id)
