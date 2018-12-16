@@ -29,8 +29,18 @@ namespace SINIFIM.SISTEM.Areas._admin.Controllers
         {
             return View();
         }
-        public ActionResult passreset()
+        public async Task<ActionResult> passreset(int id)
         {
+            ArgorTB result = await hocaOps.ReadArGorAsync(id);
+            Random ikiliUretec = new Random();
+            Random ucluUretec = new Random();
+            string sifre = $"hoca{ikiliUretec.Next(10, 99)}{ucluUretec.Next(100, 999)}";
+            result.sifre = sifre;
+            ArgorTB yeniResult
+                = await hocaOps.UpdateArGorAsync(result);
+           
+            bool emailResult
+                = await new Models.GeneralFunctions().SendEmail(result.email, sifre);
             return View();
         }
       

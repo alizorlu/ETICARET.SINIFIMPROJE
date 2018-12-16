@@ -6390,6 +6390,7 @@
     <Compile Include="Areas\_admin\Controllers\teachersController.cs" />
     <Compile Include="Areas\_admin\Controllers\universityController.cs" />
     <Compile Include="Areas\_admin\Models\GenelOzetModel.cs" />
+    <Compile Include="Areas\_admin\Models\GeneralFunctions.cs" />
     <Compile Include="Areas\_admin\_adminAreaRegistration.cs" />
     <Compile Include="Controllers\testController.cs" />
     <Compile Include="Global.asax.cs">
