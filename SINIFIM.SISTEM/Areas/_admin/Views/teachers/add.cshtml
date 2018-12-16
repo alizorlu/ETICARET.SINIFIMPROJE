@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Yeni Öğretim Görevlisi Ekleme";
+    Layout = "~/Views/Sinifim_General_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h4>Yeni Öğretim Görevlisi Ekleme</h4>
+                    <a href="/_admin/teachers/operations" class="btn btn-primary btn-sm">Öğretim Görevlileri Listesi</a>
+                </div>
+                <div class="box-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Ad Soyad</label>
+                            <input type="text" class="form-control" placeholder="Adı Soyadı">
+                        </div>
+                        <div class="form-group">
+                            <label>Üniversite Listesi</label>
+                            <select class="form-control">
+                                <option selected="selected">Üniversite Seç</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>E-Mail Adres</label>
+                            <input type="email" class="form-control" placeholder="E-mail adresi">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class=" btn btn-success btn-sm">Kaydet</button>
+                            <button type="reset" class=" btn btn-danger btn-sm">Temizle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
