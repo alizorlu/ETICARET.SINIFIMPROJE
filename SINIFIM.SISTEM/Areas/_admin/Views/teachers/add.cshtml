@@ -1,4 +1,4 @@
-﻿
+﻿@model SINIFIM.SISTEM.Areas._admin.Models.AddedsModel
 @{
     ViewBag.Title = "Yeni Öğretim Görevlisi Ekleme";
     Layout = "~/Views/Sinifim_General_Layout.cshtml";
@@ -13,20 +13,21 @@
                     <a href="/_admin/teachers/operations" class="btn btn-primary btn-sm">Öğretim Görevlileri Listesi</a>
                 </div>
                 <div class="box-body">
-                    <form>
-                        <div class="form-group">
-                            <label>Ad Soyad</label>
-                            <input type="text" class="form-control" placeholder="Adı Soyadı">
-                        </div>
+                    <form class="/_admin/teachers/add" method="post">
+                       
                         <div class="form-group">
                             <label>Üniversite Listesi</label>
-                            <select class="form-control">
-                                <option selected="selected">Üniversite Seç</option>
+                            <select class="form-control" id="@Html.DisplayNameFor(sa=>Model.argormodel.uniid)"
+                                    name="@Html.DisplayNameFor(sa=>Model.argormodel.uniid)">
+                                @foreach (var item in Model.uniList)
+                                {
+                                    <option value="@Html.DisplayFor(sa=>item.Value)">@Html.DisplayFor(sa=>item.Text)</option>
+                                }
                             </select>
                         </div>
                         <div class="form-group">
                             <label>E-Mail Adres</label>
-                            <input type="email" class="form-control" placeholder="E-mail adresi">
+                            <input type="email" name="@Html.DisplayNameFor(sa=>Model.argormodel.email)" id="@Html.DisplayNameFor(sa=>Model.argormodel.email)" class="form-control" placeholder="E-mail adresi">
                         </div>
                         <div class="form-group">
                             <button type="submit" class=" btn btn-success btn-sm">Kaydet</button>

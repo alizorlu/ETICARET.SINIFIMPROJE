@@ -1,5 +1,6 @@
 ﻿using SINIFIM.DATABASE;
 using SINIFIM.MODEL.Models.Admin;
+using SINIFIM.SISTEM.Areas._admin.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +21,22 @@ namespace SINIFIM.SISTEM.Areas._admin.Controllers
             List<ArgorTB> allList = await hocaOps.GetAllArGorAsync();
             return View(allList);
         }
-        public ActionResult add()
+        public async Task<ActionResult> add()
         {
+            var result = await new AddedsModel().getEklemeModel();
             //Burada hoca ekleme sayfası açılacak
-            return View();
+            return View(result);
+        }
+        [HttpPost]
+        public async Task<ActionResult> add(ArgorTB model)
+        {
+            model.kayit = DateTime.Now;
+            string sifre= new GeneralFunctions().RandomSifreGetir();
+            model.sifre = sifre;
+            bool result=await hocaOps.AddArGorAsync(model);
+            result = await new GeneralFunctions().YeniKayitEmail(model.email, sifre);
+            return RedirectToAction("operations", "teachers");
+            //return View();
         }
         public async Task<ActionResult> delete(int id)
         {
@@ -35,9 +48,8 @@ namespace SINIFIM.SISTEM.Areas._admin.Controllers
         public async Task<ActionResult> passreset(int id)
         {
             ArgorTB result = await hocaOps.ReadArGorAsync(id);
-            Random ikiliUretec = new Random();
-            Random ucluUretec = new Random();
-            string sifre = $"hoca{ikiliUretec.Next(10, 99)}{ucluUretec.Next(100, 999)}";
+
+            string sifre= new GeneralFunctions().RandomSifreGetir();
             result.sifre = sifre;
             ArgorTB yeniResult
                 = await hocaOps.UpdateArGorAsync(result);
