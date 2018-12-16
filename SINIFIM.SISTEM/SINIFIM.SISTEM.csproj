@@ -6387,6 +6387,7 @@
     <Compile Include="Areas\_admin\Controllers\loginController.cs" />
     <Compile Include="Areas\_admin\Controllers\operationsController.cs" />
     <Compile Include="Areas\_admin\Controllers\partialController.cs" />
+    <Compile Include="Areas\_admin\Controllers\teachersController.cs" />
     <Compile Include="Areas\_admin\Controllers\universityController.cs" />
     <Compile Include="Areas\_admin\Models\GenelOzetModel.cs" />
     <Compile Include="Areas\_admin\_adminAreaRegistration.cs" />
@@ -6870,6 +6871,8 @@
     <Content Include="Areas\_admin\Views\partial\genelOzet.cshtml" />
     <Content Include="Areas\_admin\Views\university\operations.cshtml" />
     <Content Include="Areas\_admin\Views\university\add.cshtml" />
+    <Content Include="Areas\_admin\Views\teachers\operations.cshtml" />
+    <Content Include="Areas\_admin\Views\teachers\add.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Sinifim_General_Layout.cshtml" />
     <Content Include="Views\test\Index.cshtml" />
