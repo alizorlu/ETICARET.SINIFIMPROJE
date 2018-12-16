@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6235612e8a23434ba1d8c1400f4bad45" Name="Diagram1">
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.AdminTB" Width="1.5" PointX="0.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.AnketCevapTB" Width="1.5" PointX="15" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.AnketlerTB" Width="1.5" PointX="12.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.ArgorTB" Width="1.5" PointX="5.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.Duyuru_GorenlerTB" Width="1.5" PointX="12" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.DuyurularTB" Width="1.5" PointX="9.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.GelenMesajTB" Width="1.5" PointX="9.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.GonderilenMesajTB" Width="1.5" PointX="9.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.Odev_GorulduTB" Width="1.5" PointX="12" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.Odev_TeslimTB" Width="1.5" PointX="15" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.OdevlerTB" Width="1.5" PointX="9.75" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.OgrenciTB" Width="1.5" PointX="7.5" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.SanalSinifTB" Width="1.5" PointX="7.5" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.SinifOgrencilerTB" Width="1.5" PointX="12.75" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.UniversiteTB" Width="1.5" PointX="3" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.database_firewall_rules" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_ArgorTB_AdminTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_UniversiteTB_AdminTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_AnketCevapTB_AnketlerTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_AnketCevapTB_OgrenciTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_AnketlerTB_ArgorTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_AnketlerTB_SanalSinifTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_ArgorTB_UniversiteTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_DuyurularTB_ArgorTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_OgrenciTB_ArgorTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_SanalSinifTB_ArgorTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_Duyuru_GorenlerTB_DuyurularTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_Duyuru_GorenlerTB_OgrenciTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_DuyurularTB_SanalSinifTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_GelenMesajTB_OgrenciTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_GonderilenMesajTB_OgrenciTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_Odev_GorulduTB_OdevlerTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_Odev_GorulduTB_OgrenciTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_Odev_TeslimTB_OdevlerTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_Odev_TeslimTB_OgrenciTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_OdevlerTB_SanalSinifTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_SinifOgrencilerTB_OgrenciTB" ManuallyRouted="false" />
+        <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_SinifOgrencilerTB_SanalSinifTB" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

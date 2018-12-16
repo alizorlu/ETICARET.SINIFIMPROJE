@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="~/Areas/_admin/Content/login.css" rel="stylesheet">
+    
+    <title>Sınıfım.Com - Yönetici</title>
+</head>
+<body>
+    
+
+    <div class="content">
+        <div class="row">
+            <p class="admin-text m-top-xl">Yönetİcİ</p>
+            <div class="panel">
+                <form action="/_admin/login/signinserver" method="post">
+                    <img class="client-logo"
+                         src="https://image.flaticon.com/icons/svg/1/1819.svg" width="200" height="60" alt="" />
+
+                    <label for="username">Kullanıcı</label>
+                    <input type="text" name="email" style="width:100% !important;height:3vh !important;" /><br />
+                    <label for="password">Şifre</label>
+                    <input type="password" name="password" style="width:100% !important;height:3vh !important;" /><br />
+                    <p>&nbsp;</p>
+                    <input name="Login" value="GİrİŞ" type="submit" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="columns medium-6">
+                <img src="https://www.captiva2-webdev.com/tourgreens/images/captiva-logo-watermark.png" alt="" />
+            </div>
+            <div class="columns medium-6">
+                <img src="https://www.captiva2-webdev.com/tourgreens/images/empoweren-logo-watermark.png" alt="" />
+            </div>
+    </footer>
+    </div>
+</body>
+</html>

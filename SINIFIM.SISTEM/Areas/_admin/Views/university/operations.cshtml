@@ -1,0 +1,73 @@
+﻿@model List<SINIFIM.DATABASE.UniversiteTB>
+@{
+    ViewBag.Title = "Üniversiteler Listesi";
+    Layout = "~/Views/Sinifim_General_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        @if (Html.DisplayFor(sa => TempData["silme"]).ToString().Length > 0)
+        {
+            <div class="col-md-12 text-center bg-danger text-white">
+                @Html.DisplayFor(sa => TempData["silme"]).ToString()
+            </div>
+
+        }
+
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h4>Üniversiteler Listesi</h4>
+                    <a href="/_admin/university/add" class="btn btn-primary btn-sm">Yeni Üniversite</a>
+                </div>
+                <div class="box-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Üniversite</th>
+                                <th>Sınıf Sayısı</th>
+                                <th>Hoca Sayısı</th>
+                                <th>Öğr. Sayısı</th>
+                                <th>#İŞLEM#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@Html.DisplayFor(sa => item.universite)</td>
+                                    <td>
+                                        @{ int sinifsayisi = 0;
+                                            int hocasayisi = 0;
+                                            int ogrencisayisi = 0;
+                                        }
+                                        @foreach (var sinifItem in item.ArgorTB.ToList())
+                                        {
+                                            ++hocasayisi;
+                                            sinifsayisi += sinifItem.SanalSinifTB.Count;
+                                            ogrencisayisi += sinifItem.OgrenciTB.Count;
+                                        }
+                                        @Html.DisplayFor(sa => sinifsayisi)
+                                    </td>
+                                    <td> @Html.DisplayFor(sa => hocasayisi)</td>
+                                    <td> @Html.DisplayFor(sa => ogrencisayisi)</td>
+                                    <td>
+                                        <form action="/university/deleteUni?id=@Html.DisplayFor(sa=>item.id)" method="post">
+                                            <button class="btn btn-danger btn-sm" type="submit">
+                                                Sil
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-footer">
+                    <small>Toplam üniversite sayısı @Html.DisplayFor(sa => Model.Count)</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
