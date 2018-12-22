@@ -6387,12 +6387,15 @@
     <Compile Include="Areas\_admin\Controllers\loginController.cs" />
     <Compile Include="Areas\_admin\Controllers\operationsController.cs" />
     <Compile Include="Areas\_admin\Controllers\partialController.cs" />
+    <Compile Include="Areas\_admin\Controllers\studentsController.cs" />
     <Compile Include="Areas\_admin\Controllers\teachersController.cs" />
     <Compile Include="Areas\_admin\Controllers\universityController.cs" />
     <Compile Include="Areas\_admin\Models\AddedsModel.cs" />
     <Compile Include="Areas\_admin\Models\GenelOzetModel.cs" />
     <Compile Include="Areas\_admin\Models\GeneralFunctions.cs" />
     <Compile Include="Areas\_admin\_adminAreaRegistration.cs" />
+    <Compile Include="Areas\_teacher\Controllers\teacheroperationsController.cs" />
+    <Compile Include="Areas\_teacher\_teacherAreaRegistration.cs" />
     <Compile Include="Controllers\testController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -6877,6 +6880,10 @@
     <Content Include="Areas\_admin\Views\teachers\add.cshtml" />
     <Content Include="Areas\_admin\Views\teachers\delete.cshtml" />
     <Content Include="Areas\_admin\Views\teachers\operations.cshtml" />
+    <Content Include="Areas\_admin\Views\students\operations.cshtml" />
+    <Content Include="Areas\_teacher\Views\web.config" />
+    <Content Include="Areas\_teacher\Views\_Teacher_General_Layout.cshtml" />
+    <Content Include="Areas\_teacher\Views\teacheroperations\virtualclassoperations.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Sinifim_General_Layout.cshtml" />
     <Content Include="Views\test\Index.cshtml" />
@@ -6890,6 +6897,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\_admin\Views\Shared\" />
+    <Folder Include="Areas\_teacher\Models\" />
+    <Folder Include="Areas\_teacher\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

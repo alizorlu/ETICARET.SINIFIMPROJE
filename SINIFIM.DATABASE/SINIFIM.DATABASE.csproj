@@ -63,9 +63,6 @@
     <Compile Include="ArgorTB.cs">
       <DependentUpon>SinifimModelData.tt</DependentUpon>
     </Compile>
-    <Compile Include="database_firewall_rules.cs">
-      <DependentUpon>SinifimModelData.tt</DependentUpon>
-    </Compile>
     <Compile Include="DuyurularTB.cs">
       <DependentUpon>SinifimModelData.tt</DependentUpon>
     </Compile>

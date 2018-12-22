@@ -1,0 +1,54 @@
+﻿@model List<SINIFIM.DATABASE.OgrenciTB>
+@{
+    ViewBag.Title = "Öğrenciler Listesi";
+    Layout = "~/Views/Sinifim_General_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h4>Öğrenciler Listesi</h4>
+                    <a href="#" class="btn btn-primary btn-sm">Yeni Öğrenci Görevlisi Ekle</a>
+                </div>
+                <div class="box-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>E-Mail</th>
+                                <th>
+                                    Üniversite
+                                </th>
+                                <th>Sormlu Hoca</th>
+                                <th>Kayıt Trh.</th>
+                                <th>Son Aktif Trh.</th>
+                                <th>#İŞLEMLER#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         @foreach (var item in Model)
+                         {
+                             <tr>
+                                 <td>@Html.DisplayFor(sa => item.email)</td>
+                                 <td>@Html.DisplayFor(sa => item.ArgorTB.UniversiteTB.universite)</td>
+                                 <td>@Html.DisplayFor(sa => item.ArgorTB.email)</td>
+                                 <td>@Html.DisplayFor(sa => item.ilkkayit)</td>
+                                 <td>
+                                 @{
+                                     if (item.sonaktif == null) { return; }
+                                     else
+                                     {
+                                         @Html.DisplayFor(sa => item.sonaktif)
+                                     }
+                                 }</td>
+                             </tr>
+                         }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

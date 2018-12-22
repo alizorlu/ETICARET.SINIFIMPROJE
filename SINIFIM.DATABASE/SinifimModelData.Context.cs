@@ -40,6 +40,5 @@ namespace SINIFIM.DATABASE
         public virtual DbSet<SanalSinifTB> SanalSinifTB { get; set; }
         public virtual DbSet<SinifOgrencilerTB> SinifOgrencilerTB { get; set; }
         public virtual DbSet<UniversiteTB> UniversiteTB { get; set; }
-        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
     }
 }

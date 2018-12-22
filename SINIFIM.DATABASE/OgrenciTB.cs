@@ -32,6 +32,8 @@ namespace SINIFIM.DATABASE
         public Nullable<System.DateTime> ilkkayit { get; set; }
         public Nullable<System.DateTime> sonaktif { get; set; }
         public Nullable<int> argorid { get; set; }
+        public string ad { get; set; }
+        public string soyad { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AnketCevapTB> AnketCevapTB { get; set; }

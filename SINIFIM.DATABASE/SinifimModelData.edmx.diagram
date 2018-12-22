@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6235612e8a23434ba1d8c1400f4bad45" Name="Diagram1">
+      <Diagram DiagramId="97b8e1fad9f24adfba4d9af1f63fb7cc" Name="Diagram1">
         <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.AdminTB" Width="1.5" PointX="0.75" PointY="14.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.AnketCevapTB" Width="1.5" PointX="15" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.AnketCevapTB" Width="1.5" PointX="15" PointY="22.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.AnketlerTB" Width="1.5" PointX="12.75" PointY="23.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.ArgorTB" Width="1.5" PointX="5.25" PointY="18.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.Duyuru_GorenlerTB" Width="1.5" PointX="12" PointY="20.875" IsExpanded="true" />
@@ -16,11 +16,10 @@
         <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.Odev_GorulduTB" Width="1.5" PointX="12" PointY="27.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.Odev_TeslimTB" Width="1.5" PointX="15" PointY="26.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.OdevlerTB" Width="1.5" PointX="9.75" PointY="29" IsExpanded="true" />
-        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.OgrenciTB" Width="1.5" PointX="7.5" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.OgrenciTB" Width="1.5" PointX="7.5" PointY="23.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.SanalSinifTB" Width="1.5" PointX="7.5" PointY="29" IsExpanded="true" />
-        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.SinifOgrencilerTB" Width="1.5" PointX="12.75" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.SinifOgrencilerTB" Width="1.5" PointX="12.75" PointY="31.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.UniversiteTB" Width="1.5" PointX="3" PointY="24" IsExpanded="true" />
-        <EntityTypeShape EntityType="SinifimCom_SinifimDB2018DBModel.database_firewall_rules" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_ArgorTB_AdminTB" ManuallyRouted="false" />
         <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_UniversiteTB_AdminTB" ManuallyRouted="false" />
         <AssociationConnector Association="SinifimCom_SinifimDB2018DBModel.FK_AnketCevapTB_AnketlerTB" ManuallyRouted="false" />

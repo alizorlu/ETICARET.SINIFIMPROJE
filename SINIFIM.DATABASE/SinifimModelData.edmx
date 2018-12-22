@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SinifimCom_SinifimDB2018DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="SinifimCom_SinifimDB2018DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AdminTB">
           <Key>
             <PropertyRef Name="id" />
@@ -127,6 +127,8 @@
           <Property Name="ilkkayit" Type="datetime" />
           <Property Name="sonaktif" Type="datetime" />
           <Property Name="argorid" Type="int" />
+          <Property Name="ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="soyad" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="SanalSinifTB">
           <Key>
@@ -155,24 +157,6 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="universite" Type="nvarchar" MaxLength="50" />
           <Property Name="adminid" Type="int" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'SinifimCom_SinifimDB2018DB.sys.database_firewall_rules' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="database_firewall_rules">
-          <Key>
-            <PropertyRef Name="id" />
-            <PropertyRef Name="name" />
-            <PropertyRef Name="start_ip_address" />
-            <PropertyRef Name="end_ip_address" />
-            <PropertyRef Name="create_date" />
-            <PropertyRef Name="modify_date" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="start_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
-          <Property Name="end_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
-          <Property Name="create_date" Type="datetime" Nullable="false" />
-          <Property Name="modify_date" Type="datetime" Nullable="false" />
         </EntityType>
         <Association Name="FK_AnketCevapTB_AnketlerTB">
           <End Role="AnketlerTB" Type="Self.AnketlerTB" Multiplicity="0..1" />
@@ -482,16 +466,6 @@ warning 6002: The table/view 'SinifimCom_SinifimDB2018DB.sys.database_firewall_r
           <EntitySet Name="SanalSinifTB" EntityType="Self.SanalSinifTB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SinifOgrencilerTB" EntityType="Self.SinifOgrencilerTB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UniversiteTB" EntityType="Self.UniversiteTB" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" store:Type="Views" store:Schema="sys">
-            <DefiningQuery>SELECT 
-    [database_firewall_rules].[id] AS [id], 
-    [database_firewall_rules].[name] AS [name], 
-    [database_firewall_rules].[start_ip_address] AS [start_ip_address], 
-    [database_firewall_rules].[end_ip_address] AS [end_ip_address], 
-    [database_firewall_rules].[create_date] AS [create_date], 
-    [database_firewall_rules].[modify_date] AS [modify_date]
-    FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_AnketCevapTB_AnketlerTB" Association="Self.FK_AnketCevapTB_AnketlerTB">
             <End Role="AnketlerTB" EntitySet="AnketlerTB" />
             <End Role="AnketCevapTB" EntitySet="AnketCevapTB" />
@@ -735,6 +709,8 @@ warning 6002: The table/view 'SinifimCom_SinifimDB2018DB.sys.database_firewall_r
           <Property Name="ilkkayit" Type="DateTime" Precision="3" />
           <Property Name="sonaktif" Type="DateTime" Precision="3" />
           <Property Name="argorid" Type="Int32" />
+          <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="AnketCevapTB" Relationship="Self.FK_AnketCevapTB_OgrenciTB" FromRole="OgrenciTB" ToRole="AnketCevapTB" />
           <NavigationProperty Name="ArgorTB" Relationship="Self.FK_OgrenciTB_ArgorTB" FromRole="OgrenciTB" ToRole="ArgorTB" />
           <NavigationProperty Name="Duyuru_GorenlerTB" Relationship="Self.FK_Duyuru_GorenlerTB_OgrenciTB" FromRole="OgrenciTB" ToRole="Duyuru_GorenlerTB" />
@@ -780,22 +756,6 @@ warning 6002: The table/view 'SinifimCom_SinifimDB2018DB.sys.database_firewall_r
           <Property Name="adminid" Type="Int32" />
           <NavigationProperty Name="AdminTB" Relationship="Self.FK_UniversiteTB_AdminTB" FromRole="UniversiteTB" ToRole="AdminTB" />
           <NavigationProperty Name="ArgorTB" Relationship="Self.FK_ArgorTB_UniversiteTB" FromRole="UniversiteTB" ToRole="ArgorTB" />
-        </EntityType>
-        <EntityType Name="database_firewall_rules">
-          <Key>
-            <PropertyRef Name="id" />
-            <PropertyRef Name="name" />
-            <PropertyRef Name="start_ip_address" />
-            <PropertyRef Name="end_ip_address" />
-            <PropertyRef Name="create_date" />
-            <PropertyRef Name="modify_date" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="start_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="end_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <Association Name="FK_ArgorTB_AdminTB">
           <End Role="AdminTB" Type="Self.AdminTB" Multiplicity="0..1" />
@@ -1105,7 +1065,6 @@ warning 6002: The table/view 'SinifimCom_SinifimDB2018DB.sys.database_firewall_r
           <EntitySet Name="SanalSinifTB" EntityType="Self.SanalSinifTB" />
           <EntitySet Name="SinifOgrencilerTB" EntityType="Self.SinifOgrencilerTB" />
           <EntitySet Name="UniversiteTB" EntityType="Self.UniversiteTB" />
-          <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
           <AssociationSet Name="FK_ArgorTB_AdminTB" Association="Self.FK_ArgorTB_AdminTB">
             <End Role="AdminTB" EntitySet="AdminTB" />
             <End Role="ArgorTB" EntitySet="ArgorTB" />
@@ -1333,6 +1292,8 @@ warning 6002: The table/view 'SinifimCom_SinifimDB2018DB.sys.database_firewall_r
                 <ScalarProperty Name="ilkkayit" ColumnName="ilkkayit" />
                 <ScalarProperty Name="sonaktif" ColumnName="sonaktif" />
                 <ScalarProperty Name="argorid" ColumnName="argorid" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="soyad" ColumnName="soyad" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1364,18 +1325,6 @@ warning 6002: The table/view 'SinifimCom_SinifimDB2018DB.sys.database_firewall_r
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="universite" ColumnName="universite" />
                 <ScalarProperty Name="adminid" ColumnName="adminid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="database_firewall_rules">
-            <EntityTypeMapping TypeName="SinifimCom_SinifimDB2018DBModel.database_firewall_rules">
-              <MappingFragment StoreEntitySet="database_firewall_rules">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="start_ip_address" ColumnName="start_ip_address" />
-                <ScalarProperty Name="end_ip_address" ColumnName="end_ip_address" />
-                <ScalarProperty Name="create_date" ColumnName="create_date" />
-                <ScalarProperty Name="modify_date" ColumnName="modify_date" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
