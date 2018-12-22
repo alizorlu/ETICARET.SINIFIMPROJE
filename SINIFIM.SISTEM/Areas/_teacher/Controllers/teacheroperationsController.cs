@@ -23,11 +23,15 @@ namespace SINIFIM.SISTEM.Areas._teacher.Controllers
 
         }
         // GET: _teacher/teacheroperations
-        public ActionResult sanalSinif()
+        public async Task< ActionResult> sanalSinif()
         {
-            var d = new DATABASE.SanalSinifTB();
+           
+            var result =await hocaOps.GetAllArGorAsync();
+            var resultFinded = result.Find(sa=>sa.id==varsayilanHocaid);
+            if (resultFinded == null) return null;
             
-            return View();
+            
+            return View(resultFinded.SanalSinifTB.ToList());
         }
         public async Task<ActionResult> virtualclassoperations()
         {

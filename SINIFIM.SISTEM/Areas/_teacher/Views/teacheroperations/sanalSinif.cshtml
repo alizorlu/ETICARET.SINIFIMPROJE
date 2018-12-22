@@ -1,4 +1,4 @@
-﻿
+﻿@model List<SINIFIM.DATABASE.SanalSinifTB>
 @{
     ViewBag.Title = "sanalSinif";
     Layout = "~/Views/Sinifim_General_Layout.cshtml";
@@ -20,21 +20,27 @@
                                 <th>
                                     Üniversite
                                 </th>
-                                <th>Email</th>
+                                
                                 <th>Sınıf Adı</th>
                                 <th>Toplam Öğrenci</th>
-                                
+                                <th> #İŞLEMLER</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Songül Karakuş</td>
-                                <td>Fırat Üniversitesi</td>
-                                <td>sgkara@sg.com</td>
-                                <td> YMT 211 </td>
-                                <td>10</td>
-                                
-                            </tr>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@Html.DisplayFor(sa=>item.ArgorTB.email)</td>
+                                    <td>@Html.DisplayFor(sa=>item.ArgorTB.UniversiteTB.universite)</td>
+                                    <td>@Html.DisplayFor(sa=>item.sinifadi)</td>
+                                    <td>@Html.DisplayFor(sa=>item.SinifOgrencilerTB.Count) </td>
+                                    <td>
+                                        <button class="btn btn-danger btn-sm btn-block" >Sil </button>
+                                    </td>
+
+                                </tr>
+
+                            }
                         </tbody>
                     </table>
                 </div>
