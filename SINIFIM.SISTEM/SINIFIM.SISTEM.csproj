@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\_admin\Content\login.css" />
+    <Content Include="Areas\_teacher\Content\login.css" />
     <Content Include="Content\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css" />
     <Content Include="Content\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css" />
     <Content Include="Content\bower_components\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\alpha-horizontal.png" />
@@ -6886,6 +6887,7 @@
     <Content Include="Areas\_teacher\Views\teacheroperations\virtualclassoperations.cshtml" />
     <Content Include="Areas\_teacher\Views\teacheroperations\sanalSinif.cshtml" />
     <Content Include="Areas\_admin\Views\teachers\sanalSinif.cshtml" />
+    <Content Include="Areas\_teacher\Views\login\Signin.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Sinifim_General_Layout.cshtml" />
     <Content Include="Views\test\Index.cshtml" />
