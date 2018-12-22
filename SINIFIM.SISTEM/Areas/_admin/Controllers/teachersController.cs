@@ -27,6 +27,7 @@ namespace SINIFIM.SISTEM.Areas._admin.Controllers
             //Burada hoca ekleme sayfası açılacak
             return View(result);
         }
+        
         [HttpPost]
         public async Task<ActionResult> add(ArgorTB model)
         {
