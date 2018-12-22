@@ -12,8 +12,21 @@ namespace SINIFIM.SISTEM.Areas._admin.Controllers
 {
     public class teachersController : Controller
     {
+        private int varsayilanHocaid { get; set; }
         private HocalarOperations hocaOps { get; set; } = null;
-        public teachersController() => hocaOps = new HocalarOperations();
+        public teachersController()
+        {
+            hocaOps = new HocalarOperations();
+            #region NOT!: GİRİŞ İŞLEMİ YAPILDIĞINDA BURASI DÜZELTİLECEK
+            var allTeachers = hocaOps.GetAllArGorAsync().Result;
+            var ilkHoca = allTeachers.First();
+            if (ilkHoca == null) return;
+            varsayilanHocaid = ilkHoca.id;
+            #endregion
+
+        }
+
+
         // GET: _admin/teachers
         public async Task<ActionResult> operations()
         {
@@ -59,8 +72,17 @@ namespace SINIFIM.SISTEM.Areas._admin.Controllers
                 = await new Models.GeneralFunctions().SendEmail(result.email, sifre);
             return View();
         }
-      
-        
-        
+        public async Task<ActionResult> sanalSinif()
+        {
+
+            var result = await hocaOps.GetAllArGorAsync();
+            var resultFinded = result.Find(sa => sa.id == varsayilanHocaid);
+            if (resultFinded == null) return null;
+
+
+            return View(resultFinded.SanalSinifTB.ToList());
+        }
+
+
     }
 }

@@ -6885,6 +6885,7 @@
     <Content Include="Areas\_teacher\Views\_Teacher_General_Layout.cshtml" />
     <Content Include="Areas\_teacher\Views\teacheroperations\virtualclassoperations.cshtml" />
     <Content Include="Areas\_teacher\Views\teacheroperations\sanalSinif.cshtml" />
+    <Content Include="Areas\_admin\Views\teachers\sanalSinif.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Sinifim_General_Layout.cshtml" />
     <Content Include="Views\test\Index.cshtml" />
